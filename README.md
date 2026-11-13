@@ -1,66 +1,91 @@
-# ⚡ AirDrop Local // Neo-Brutalist P2P Wi-Fi Transfer
+<div align="center">
 
-> Cross-platform, bidirectional local file transfer and text beam web app running on macOS that transfers files and notes between Mac, Android, iPhone, and PC over local Wi-Fi with **zero app installation**.
+# ⚡ AIRDROP LOCAL
+### Neo-Brutalist P2P Wi-Fi Transfer & Live Clipboard Beam
 
-Styled with the **`kinetic-ui`** design system following **Archetype 028: Concept D (Neo-Brutalist / Electric Pop)**.
+[![License: MIT](https://img.shields.io/badge/License-MIT-FFE600.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=black)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Mac%20%7C%20iOS%20%7C%20Android%20%7C%20Windows-00E5FF.svg?style=for-the-badge&logo=apple&logoColor=black)](#)
+[![Zero Cloud](https://img.shields.io/badge/Privacy-100%25%20Local%20Wi--Fi-00FF66.svg?style=for-the-badge&logo=shield&logoColor=black)](#)
+[![Kinetic UI](https://img.shields.io/badge/Design-Archetype%20028%20Neo--Brutalist-FF4757.svg?style=for-the-badge)](#visual--ui-design-system)
+
+<p align="center">
+  <b>Bidirectional cross-platform local file sharing and text sync across Mac, iPhone, Android, and PC.</b><br />
+  Zero apps to install • Zero cloud accounts • 100% direct LAN streaming over your local Wi-Fi router.
+</p>
+
+---
+
+### 🖥️ Desktop Web Interface (Neo-Brutalist Kinetic UI)
+<img src="docs/screenshots/desktop-ui.png" alt="AirDrop Local Desktop UI" width="100%" style="border: 3px solid #000; box-shadow: 6px 6px 0px #000;" />
+
+<br /><br />
+
+<table align="center" width="100%">
+  <tr>
+    <td width="35%" align="center" valign="top">
+      <h4>📱 Mobile View (iOS / Android)</h4>
+      <img src="docs/screenshots/mobile-ui.png" alt="AirDrop Local Mobile View" width="280px" style="border: 3px solid #000; box-shadow: 4px 4px 0px #000;" />
+    </td>
+    <td width="65%" align="center" valign="top">
+      <h4>⚡ Instant Mobile Pairing (Scan with Camera)</h4>
+      <br />
+      <p align="left">
+        No app downloads required. Simply point any iPhone or Android camera at the QR code on your Mac screen to open the web app instantly!
+      </p>
+      <br />
+      <ul align="left">
+        <li>🚀 <b>Zero Installation:</b> Runs directly in Safari, Chrome, Edge, and Firefox</li>
+        <li>⚡ <b>Gigabit Wi-Fi Speed:</b> Uncapped LAN transfer rates directly via your router</li>
+        <li>🔒 <b>100% Air-Gapped Privacy:</b> Files never touch any external server or cloud</li>
+        <li>📸 <b>Camera Direct Snap:</b> Take photos directly on phone and beam to Mac in 1 tap</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## ⚡ Why AirDrop Local?
+
+| Feature | ⚡ AirDrop Local | 🍏 Apple AirDrop | 🤖 Nearby Share | ☁️ WeTransfer / Drive |
+|---|:---:|:---:|:---:|:---:|
+| **Zero App Installation** | ✅ **100% Web (Zero install)** | ❌ Apple only | ❌ Google account | ❌ Requires upload wait |
+| **Cross-Platform** | ✅ **Mac ⇄ iPhone ⇄ Android ⇄ PC** | ❌ Apple ecosystem only | ❌ Android/Windows only | ⚠️ Needs web account |
+| **Local LAN Privacy** | ✅ **100% Private (No Cloud)** | ✅ P2P BLE/Wi-Fi | ⚠️ Cloud telemetry | ❌ Third-party cloud servers |
+| **File Size Limits** | 🚀 **Unlimited (Gigabytes ok)** | ⚠️ Drops on big batches | ⚠️ 10 GB limits | ❌ 2 GB cap / slow speeds |
+| **Live Clipboard Beam** | ✅ **Instant Text & Link Sync** | ⚠️ Universal Clipboard (Mac/iOS only) | ❌ No | ❌ Manual messaging |
+| **In-Browser Media Player** | ✅ **Stream Video, Audio, PDF & Code** | ❌ No | ❌ No | ⚠️ Transcoded / delayed |
 
 ---
 
 ## 🎨 Visual & UI Design System (Concept D: Neo-Brutalist)
 
+Styled following **Kinetic UI Archetype 028: Concept D (Neo-Brutalist / Electric Pop)**:
+
 - **Color Tokens:**
-  - Canvas: Off-white / Cream `#F7F7F2` with Stark Black `#0A0A0A` dark mode support
-  - Accent 1 (Primary Pop): Electric Yellow `#FFE600`
-  - Accent 2 (Success/Signal): Acid Green `#00FF66`
-  - Accent 3 (Attention): Hot Coral `#FF4757` & Electric Cyan `#00E5FF`
-  - Ink & Borders: Pitch Black `#000000` with 3px solid borders (`border-3 border-black`)
+  - `Canvas`: Off-white / Cream `#F7F7F2` with Stark Black `#0A0A0A` dark mode support
+  - `Accent 1 (Primary Pop)`: Electric Yellow `#FFE600`
+  - `Accent 2 (Signal / Success)`: Acid Green `#00FF66`
+  - `Accent 3 (Attention)`: Hot Coral `#FF4757` & Electric Cyan `#00E5FF`
+  - `Ink & Borders`: Pitch Black `#000000` with 3px solid borders (`border-3 border-black`)
 - **Brutalist Physics & Surfaces:**
-  - Solid, unblurred 4px & 6px hard drop shadows (`box-shadow: 4px 4px 0px #000000`, `6px 6px 0px #000000`)
+  - Solid, unblurred 4px & 6px hard drop shadows (`box-shadow: 4px 4px 0px #000000`, `6px 6px 0px #000`)
   - Tactile button press micro-interaction (`active:translate-x-[2px] active:translate-y-[2px]`)
   - Playful tilted sticker badges (`⚡ LOCAL WI-FI ONLY`, `🔒 NO CLOUD / 100% PRIVATE`, `📱 ANDROID & iOS READY`, `🚀 ZERO LIMITS`)
-  - Custom desktop kinetic brutalist pointer with hover snapping (disabled on mobile touch devices)
-- **Typography:**
-  - Display: Heavy grotesque sans (**Space Grotesk** & **Syne** 800/900)
-  - Telemetry: Monospace (**JetBrains Mono** & **Space Mono**) for file sizes, IPs, and transfer speeds
-- **Haptic Audio (Web Audio API):**
-  - Procedural sound synthesis: tactile clicks, ascending celebratory chime for transfers, 2-tone futuristic beam notification, snappy copy pop, and mute/unmute control.
+  - Desktop kinetic brutalist pointer with snapping micro-interaction (automatically disabled on touch screens)
+- **Typography Trio:**
+  - Display: **Space Grotesk** & **Syne** (Extra Bold 800/900)
+  - Telemetry & Code: **JetBrains Mono** for file sizes, IPs, and transfer speeds
+- **Procedural Haptic Audio (Web Audio API):**
+  - Tactile pops on button clicks, ascending celebratory fanfare for file completion, 2-tone arpeggio for incoming text beams, snappy chirp on clipboard copy, and prominent mute toggle.
 
 ---
 
-## 📱 Dual Responsive Layout
+## 🚀 Quickstart Guide
 
-### Desktop (Mac / Laptop)
-- **Left Column:**
-  - Bold framed pairing QR code card (interactive dynamic QR encoding `http://<MAC_IP>:<PORT>`)
-  - Network interface selector for multi-homed devices (Wi-Fi, Ethernet, Hotspot)
-  - One-click copy link & full-screen QR modal for room-scale mobile scanning
-  - Live Text & Link Beam card with instant broadcast and 1-tap clipboard copy
-- **Right Column:**
-  - Massive dashed neo-brutalist dropzone with spring drag-over animation
-  - Real-time upload progress bar with live transfer speed (MB/s) and byte telemetry
-  - Live transfer feed of incoming/outgoing files with one-click download, media preview modal, and delete actions
-  - Batch **Download All (.ZIP)** packaging
-
-### Mobile (Android & iPhone)
-- Touch-optimized controls with zero custom cursor interference (`pointer: coarse` safe)
-- Prominent tactile tap targets: **Select Photos / Files** and **Take Photo / Camera** (`capture="environment"`)
-- Direct one-tap file downloading and instant clipboard copying
-
----
-
-## 🔒 100% Local LAN Security & Privacy
-
-Transfers flow directly over your local Wi-Fi router via local socket and HTTP streaming. **Zero data ever leaves your local network or touches external cloud servers.**
-
----
-
-## 🚀 Quickstart
-
-### Prerequisites
-- Node.js 18+ (Tested on Node v20+ and v26+)
-- npm or yarn
-
-### 1. Installation
+### 1. Clone & Install
 ```bash
 git clone https://github.com/i-m-champion/AirDrop.git
 cd AirDrop
@@ -71,35 +96,71 @@ npm install
 ```bash
 npm start
 ```
-> The startup script will automatically build the frontend assets (`npm run build`) and boot up the Express + WebSocket server.
+> The startup command automatically compiles frontend assets (`npm run build`) and starts the server with **automatic port-conflict fallback** (e.g. `3030`, `3031` if `3000` is busy).
 
-Upon startup, the terminal displays an ASCII QR code along with the host IP:
+Upon launch, an ASCII QR code is rendered directly in your terminal:
+
 ```text
 ================================================================
 ⚡  AIRDROP LOCAL // NEO-BRUTALIST P2P WI-FI TRANSFER
 ================================================================
 📡 Host Machine : Ayushs-MacBook-Air-5.local (darwin)
-🌐 Primary Wi-Fi: 192.168.1.211:3000
-🔗 Browser Link : http://192.168.1.211:3000
+🌐 Primary Wi-Fi: 192.168.1.211:3030
+🔗 Browser Link : http://192.168.1.211:3030
 ================================================================
 📱 SCAN WITH IPHONE / ANDROID CAMERA TO PAIR INSTANTLY:
 
-  [ ASCII QR CODE EMBEDDED IN TERMINAL ]
+  ▄▄▄▄▄▄▄ ▄ ▄ ▄▄▄▄▄▄▄
+  █ ▄▄▄ █ ▄ ▄ █ ▄▄▄ █
+  █ ███ █ █ █ █ ███ █
+  █▄▄▄▄▄█ █ █ █▄▄▄▄▄█
+  ▄▄▄▄▄ ▄▄█ █▄ ▄ ▄ ▄ 
+  █ ▄ █▄▄▀ ▄▀ ▄▀██ █ 
+  █ █▄▄▄█ █ ▄▄ █▄██ █
+  █▄▄▄▄▄▄▄█ █ ▀ █ █▄█
 
-⚡ Status: Server listening on 0.0.0.0:3000
+⚡ Status: Server listening on 0.0.0.0:3030
 🔒 Privacy: 100% Local Wi-Fi Router Only (Zero External Cloud)
 ================================================================
 ```
 
-### 3. Connect Any Device
-1. Ensure your iPhone, Android phone, or PC is connected to the same Wi-Fi network.
-2. Open your phone's native camera and point it at the QR code (either on your Mac screen or in the terminal).
-3. Tap the yellow pop link to open the web app.
-4. Start transferring files and beaming text bidirectionally!
+### 3. One-Click Launchers on Mac
+You can also open the web app anytime simply by double-clicking:
+- **`Launch AirDrop.command`**: macOS executable that checks if the server is active, starts it if needed, and launches the browser.
+- **`Open AirDrop.html`**: Instant universal browser redirect file.
+- **`Open AirDrop.webloc`**: Native macOS Web Location shortcut.
 
 ---
 
-## 🛠 Project Architecture
+## 📱 Dual Responsive Layout Architecture
+
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│  ⚡ AIRDROP LOCAL    [● ONLINE // WI-FI]    [⚡ LOCAL WI-FI] [🔒 100% PRIVATE]    [🔊] [🌓] │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│  ⚡ DIRECT WI-FI P2P ⚡ ZERO CLOUD ⚡ 100% PRIVATE ⚡ UNLIMITED FILE SIZE ⚡ MAC • PHONE ⚡   │
+├──────────────────────────────────────────┬─────────────────────────────────────────────┤
+│  📱 INSTANT MOBILE PAIRING               │  ☁️ DROP FILES ANYWHERE TO TRANSFER         │
+│  ┌────────────────────────────────────┐  │  ┌───────────────────────────────────────┐  │
+│  │     [ ELECTRIC YELLOW QR CODE ]    │  │  │   [ 📁 SELECT FILES ] [ 📸 CAMERA ]   │  │
+│  │                                    │  │  └───────────────────────────────────────┘  │
+│  │  🌐 http://192.168.1.211:3030 [COPY]│  ├─────────────────────────────────────────────┤
+│  └────────────────────────────────────┘  │  ⚡ UPLOADING 3 FILES... [ 18.4 MB/s ] 78%  │
+│                                          │  [████████████████████████████████░░░░░░░]  │
+│  ⚡ BEAM TEXT / LINK                     ├─────────────────────────────────────────────┤
+│  ┌────────────────────────────────────┐  │  📦 LIVE TRANSFER FEED (4 Files)            │
+│  │ [Type or paste note / URL / code]  │  │  [Search...] [ALL] [IMAGES] [VIDEOS] [DOCS] │
+│  │               [⚡ BEAM TO PEERS]   │  │  ┌───────────────────────────────────────┐  │
+│  └────────────────────────────────────┘  │  │ 📹 Video_001.mp4  (37 MB)  [DOWNLOAD] │  │
+│  • iPhone: https://github.com/.. [COPY]  │  │ 🖼️ Snapshot.jpg   (4.2 MB) [PREVIEW]  │  │
+│  • Mac: Wi-Fi password: secret   [COPY]  │  │ 📦 Bundle.zip     (120 MB) [DOWNLOAD] │  │
+│                                          │  └───────────────────────────────────────┘  │
+└──────────────────────────────────────────┴─────────────────────────────────────────────┘
+```
+
+---
+
+## 🛠 Project Structure
 
 ```text
 AirDrop/
@@ -107,7 +168,7 @@ AirDrop/
 │   ├── banner.js          # Terminal ASCII QR code and startup art
 │   ├── beam.js            # Live clipboard / text sync storage
 │   ├── device.js          # User-Agent device parsing & labels
-│   ├── index.js           # Express + WebSocket HTTP server entry
+│   ├── index.js           # Express + WebSocket HTTP server & dynamic port hunter
 │   ├── network.js         # Interface discovery & Wi-Fi IP detection
 │   ├── routes.js          # REST API endpoints (upload, preview, zip, finder)
 │   ├── storage.js         # File metadata registry & disk manager
@@ -134,8 +195,13 @@ AirDrop/
 │   ├── App.jsx                   # Dual responsive layout container
 │   ├── index.css                 # Neo-Brutalist design tokens & physics
 │   └── main.jsx                  # React application entry
+├── docs/
+│   └── screenshots/              # High-resolution application screenshots
 ├── uploads/                      # Local storage directory for transferred files
-├── index.html                    # HTML shell with Google Fonts
+├── Launch AirDrop.command        # macOS double-clickable launcher
+├── Open AirDrop.html             # Universal browser redirect shortcut
+├── Open AirDrop.webloc           # Native macOS Web Location
+├── LICENSE                       # MIT License
 ├── package.json                  # Scripts & dependencies
 ├── tailwind.config.js            # Neo-Brutalist color palette & hard shadows
 └── vite.config.js                # Vite build configuration
@@ -143,7 +209,7 @@ AirDrop/
 
 ---
 
-## 📡 API Endpoints
+## 📡 REST API Reference
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -165,4 +231,4 @@ AirDrop/
 
 ## 📄 License
 
-MIT License. Built with passion for local privacy and high craft.
+MIT License © 2026 [i-m-champion](https://github.com/i-m-champion). Built with passion for local privacy, zero-cloud independence, and high visual craft.
