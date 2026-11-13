@@ -24,7 +24,7 @@
   <tr>
     <td width="35%" align="center" valign="top">
       <h4>📱 Mobile View (iOS / Android)</h4>
-      <img src="docs/screenshots/mobile-ui.png" alt="AirDrop Local Mobile View" width="280px" style="border: 3px solid #000; box-shadow: 4px 4px 0px #000;" />
+      <img src="docs/screenshots/mobile-view.jpg" alt="AirDrop Local Mobile View" width="280px" style="border: 3px solid #000; box-shadow: 4px 4px 0px #000;" />
     </td>
     <td width="65%" align="center" valign="top">
       <h4>⚡ Instant Mobile Pairing (Scan with Camera)</h4>
