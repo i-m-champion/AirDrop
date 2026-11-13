@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #F7F7F2;
+  --ink: #000000;
+  --pop-yellow: #FFE600;
+  --pop-green: #00FF66;
+  --pop-coral: #FF4757;
+  --pop-cyan: #00E5FF;
+  --pop-magenta: #FF0055;
+}
+
+/* Base styling */
+html, body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Neo-Brutalist Micro-Interactions */
+.brutal-card {
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+  background-color: #ffffff;
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.brutal-card-pop {
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+  background-color: #FFE600;
+}
+
+.brutal-btn {
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.brutal-btn:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.brutal-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.brutal-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+/* Brutalist Badge Stickers */
+.badge-sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: transform 0.12s ease;
+}
+
+.badge-sticker:hover {
+  transform: scale(1.06) rotate(0deg) !important;
+}
+
+.sticker-tilt-left {
+  transform: rotate(-2.5deg);
+}
+
+.sticker-tilt-right {
+  transform: rotate(2deg);
+}
+
+.sticker-tilt-subtle {
+  transform: rotate(-1.2deg);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F7F2;
+  border-left: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 2px solid #FFE600;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF4757;
+}
+
+/* Custom Neo-Brutalist Cursor for Desktop */
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body {
+    cursor: default;
+  }
+}
+
+/* Touch devices safety */
+@media (pointer: coarse) {
+  .brutal-btn:hover {
+    transform: none;
+  }
+  .brutal-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000000;
+  }
+}
