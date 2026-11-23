@@ -5,12 +5,21 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-FFE600.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=black)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Mac%20%7C%20iOS%20%7C%20Android%20%7C%20Windows-00E5FF.svg?style=for-the-badge&logo=apple&logoColor=black)](#)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Online-00c853?style=for-the-badge&logo=render&logoColor=white)](https://airdrop-x1b1.onrender.com/)
 [![Zero Cloud](https://img.shields.io/badge/Privacy-100%25%20Local%20Wi--Fi-00FF66.svg?style=for-the-badge&logo=shield&logoColor=black)](#)
 [![Kinetic UI](https://img.shields.io/badge/Design-Archetype%20028%20Neo--Brutalist-FF4757.svg?style=for-the-badge)](#visual--ui-design-system)
 
 <p align="center">
-  <b>Bidirectional cross-platform local file sharing and text sync across Mac, iPhone, Android, and PC.</b><br />
-  Zero apps to install • Zero cloud accounts • 100% direct LAN streaming over your local Wi-Fi router.
+  <b>Bidirectional cross-platform file sharing and text sync across Mac, iPhone, Android, and PC.</b><br />
+  Zero apps to install • Zero cloud accounts • Instant browser pairing &amp; direct streaming.
+</p>
+
+<p align="center">
+  <a href="https://airdrop-x1b1.onrender.com/"><strong>🌐 Live Demo: airdrop-x1b1.onrender.com</strong></a> •
+  <a href="#%EF%B8%8F-desktop-web-interface">Interface</a> •
+  <a href="#-why-airdrop-local">Why AirDrop</a> •
+  <a href="#-live-deployment--custom-domains">Deployment &amp; Domains</a> •
+  <a href="#-rest-api-reference">API Reference</a>
 </p>
 
 ---
@@ -83,6 +92,24 @@ Styled following **Kinetic UI Archetype 028: Concept D (Neo-Brutalist / Electric
 
 ---
 
+## 🌐 Live Deployment & Custom Domains
+
+AirDrop is hosted and live in production:
+👉 **[https://airdrop-x1b1.onrender.com/](https://airdrop-x1b1.onrender.com/)**
+
+### 🔗 Connecting a Custom Domain (e.g., FreeDomain & Cloudflare)
+You can connect custom domains (including free domain extensions from [DigitalPlat FreeDomain](https://github.com/DigitalPlatDev/FreeDomain) such as `.us.kg` or `.dpdns.org`):
+
+1. **Claim Domain:** Register your domain via the [FreeDomain Dashboard](https://dash.domain.digitalplat.org).
+2. **Setup Cloudflare DNS:** Add your domain to [Cloudflare](https://dash.cloudflare.com/) and update your FreeDomain Nameservers (NS) to Cloudflare's assigned nameservers.
+3. **Configure CNAME:** In Cloudflare DNS records, add:
+   - **Type:** `CNAME`
+   - **Name:** `@` (or `www`)
+   - **Target:** `airdrop-x1b1.onrender.com`
+4. **Attach on Render:** In your Render dashboard, navigate to **Settings** → **Custom Domains** and add your domain. SSL (HTTPS) will be provisioned automatically.
+
+---
+
 ## 🚀 Quickstart Guide
 
 ### 1. Clone & Install
@@ -96,17 +123,16 @@ npm install
 ```bash
 npm start
 ```
-> The startup command automatically compiles frontend assets (`npm run build`) and starts the server with **automatic port-conflict fallback** (e.g. `3030`, `3031` if `3000` is busy).
+> The startup command automatically compiles frontend assets (`npm run build`) and starts the server with **automatic port-conflict fallback**.
 
 Upon launch, an ASCII QR code is rendered directly in your terminal:
 
 ```text
 ================================================================
-⚡  AIRDROP LOCAL // NEO-BRUTALIST P2P WI-FI TRANSFER
+⚡  AIRDROP // NEO-BRUTALIST P2P TRANSFER
 ================================================================
-📡 Host Machine : Ayushs-MacBook-Air-5.local (darwin)
-🌐 Primary Wi-Fi: 192.168.1.211:3030
-🔗 Browser Link : http://192.168.1.211:3030
+🌐 Live Cloud Deployment : https://airdrop-x1b1.onrender.com
+📱 Peer Connection Mode  : WebRTC / WebSocket Instant Sync
 ================================================================
 📱 SCAN WITH IPHONE / ANDROID CAMERA TO PAIR INSTANTLY:
 
@@ -119,8 +145,8 @@ Upon launch, an ASCII QR code is rendered directly in your terminal:
   █ █▄▄▄█ █ ▄▄ █▄██ █
   █▄▄▄▄▄▄▄█ █ ▀ █ █▄█
 
-⚡ Status: Server listening on 0.0.0.0:3030
-🔒 Privacy: 100% Local Wi-Fi Router Only (Zero External Cloud)
+⚡ Status: Active & Ready
+🔒 Privacy: Direct End-to-End Transfer
 ================================================================
 ```
 
@@ -144,7 +170,7 @@ You can also open the web app anytime simply by double-clicking:
 │  ┌────────────────────────────────────┐  │  ┌───────────────────────────────────────┐  │
 │  │     [ ELECTRIC YELLOW QR CODE ]    │  │  │   [ 📁 SELECT FILES ] [ 📸 CAMERA ]   │  │
 │  │                                    │  │  └───────────────────────────────────────┘  │
-│  │  🌐 http://192.168.1.211:3030 [COPY]│  ├─────────────────────────────────────────────┤
+│  │  🌐 airdrop-x1b1.onrender.com [COPY]│  ├─────────────────────────────────────────────┤
 │  └────────────────────────────────────┘  │  ⚡ UPLOADING 3 FILES... [ 18.4 MB/s ] 78%  │
 │                                          │  [████████████████████████████████░░░░░░░]  │
 │  ⚡ BEAM TEXT / LINK                     ├─────────────────────────────────────────────┤
